@@ -1,0 +1,52 @@
+ALGORITHM task1
+VAR
+    words , vowles , i : INTEGER ; 
+    ch : STRING [100] ;
+    
+BEGIN
+    words := 1 ; 
+    vowles := 0 ; 
+//ABC
+    REPEAT
+        write('enter a sentence ending with a point :');
+        read(ch);
+    UNTIL (ch[lenght(ch)-1]='.')
+    FOR i FROM 0 TO ch.lenght-1 STEP 1  DO
+        IF (minus(ch[i]) in ['a', 'e','i','o','u','y']) THEN
+            vowles=vowles+1 ;
+        ELSE_IF (ch[i] =' ') THEN  
+            words=words+1 ;
+        END_IF
+    END_FOR
+
+    write('number of words in the sentence :'words);
+    write('number of vowles in the sentence:' vowles); 
+END
+
+
+
+
+
+
+
+ALGORITHM task2 
+VAR 
+    sum , i  : integr ;
+    set1 , set2  : ARRAY_OF integr[100];
+
+BEGIN
+
+    FOR i FROM 0 TO set1.lenght-1 STEP 1  DO
+        IF (set1[i] not in set2) THEN
+        sum= sum + set[i];
+        END_IF
+    END_FOR
+
+    write('the sum of all distinct elements ='sum) ;
+END
+
+
+
+
+
+
